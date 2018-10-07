@@ -13,11 +13,16 @@ app.set("views", path.join(__dirname, "/views"));
 // Logs
 app.use(morgan("dev"));
 
+// Url params middleware
+app.use(express.urlencoded());
+
 // Set static folder
 app.use("/static", express.static("public"));
 
 // Controllers
 app.use("/", indexRouter);
 
-// Start app on port 3000
-app.listen(3000, () => console.log("App listening on port 3000!"));
+// Start app on port APP_PORT
+app.listen(process.env.APP_PORT || 3000, () =>
+  console.log(`App listening on port ${process.env.APP_PORT}!`)
+);
