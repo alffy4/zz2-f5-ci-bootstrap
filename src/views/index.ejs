@@ -1,0 +1,9 @@
+<%- include('_layout/header'); -%>
+
+<% for(var i=0; i<pizzas.length; i++) { %>
+    <h2>
+        <%= pizzas[i].name %>
+    </h2>
+<% } %>
+
+<%- include('_layout/footer'); -%>
