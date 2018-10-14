@@ -16,9 +16,17 @@
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
-    "babel-watch": "^2.0.7"
+    "babel-watch": "^2.0.7",
+    "jest": "^23.6.0",
+    "supertest": "^3.3.0"
   },
   "scripts": {
-    "start": "babel-watch src/index.js -w src/views"
+    "start": "babel-watch src/index.js -w src/views",
+    "test": "npm run jest",
+    "jest": "jest --coverage **/__tests__/*.test.js"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "verbose": true
   }
 }
