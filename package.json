@@ -21,6 +21,8 @@
     "supertest": "^3.3.0"
   },
   "scripts": {
+    "isima-install": "npm install --no-bin-links",
+    "isima-start": "./node_modules/babel-watch/babel-watch.js src/index.js -w src/views",
     "start": "babel-watch src/index.js -w src/views",
     "test": "npm run jest",
     "jest": "jest --coverage **/__tests__/*.test.js"
